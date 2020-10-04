@@ -1,2 +1,2 @@
 # color_game
-A simple color game quiz
+A simple color game quiz using tkinter library
