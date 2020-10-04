@@ -6,13 +6,10 @@ colours = ['Red', 'Blue', 'Green', 'Pink', 'Black', 'Yellow', 'Orange', 'White',
 score = 0
 timeleft = 60
 
-
 def startGame(event):
     if timeleft == 60:
         countdown()
-
     nextColour()
-
 
 def nextColour():
     global score
@@ -29,14 +26,12 @@ def nextColour():
         label.config(fg=str(colours[1]), text=str(colours[0]))
         scoreLabel.config(text="Score: " + str(score))
 
-
 def countdown():
     global timeleft
     if timeleft > 0:
         timeleft -= 1
         timeLabel.config(text="Time left: " + str(timeleft))
         timeLabel.after(1000, countdown)
-
 
 root = tkinter.Tk()
 root.title("COLORGAME")
